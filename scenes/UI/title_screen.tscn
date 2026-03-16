@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://7ur6w4325y0a"]
+
+[ext_resource type="Texture2D" uid="uid://by0tw6sfd45fu" path="res://gfx/title/tree-3094982_1280.jpg" id="1_en7bx"]
+[ext_resource type="FontFile" uid="uid://c7f4bop4ocbt3" path="res://fonts/alagard_by_pix3m-d6awiwp.ttf" id="2_u5veq"]
+[ext_resource type="Theme" uid="uid://da3i6nf2tt6sk" path="res://themes/default_theme.tres" id="3_wctsj"]
+[ext_resource type="Script" uid="uid://bx7iap0n15ww2" path="res://scripts/version.gd" id="4_yjsyi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wctsj"]
+font = ExtResource("2_u5veq")
+font_size = 40
+outline_size = 2
+outline_color = Color(0.07444577, 0, 0.07064135, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_82207"]
+font = ExtResource("2_u5veq")
+font_color = Color(1, 0.7019608, 0.02745098, 1)
+
+[node name="Title Screen" type="Control" unique_id=1320750248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background Image" type="TextureRect" parent="." unique_id=759937547]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_en7bx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Content" type="MarginContainer" parent="." unique_id=885327218]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content" unique_id=1015425517]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Content/VBoxContainer" unique_id=2076358317]
+layout_mode = 2
+text = "Legacy of the Ancient Questor"
+label_settings = SubResource("LabelSettings_wctsj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="MarginContainer" parent="Content/VBoxContainer" unique_id=552666422]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Content/VBoxContainer" unique_id=2008525871]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Content/VBoxContainer/HBoxContainer" unique_id=1442544633]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button Menu" type="VBoxContainer" parent="Content/VBoxContainer/HBoxContainer" unique_id=1799986381]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="New Game Button" type="Button" parent="Content/VBoxContainer/HBoxContainer/Button Menu" unique_id=227712614]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("3_wctsj")
+theme_override_font_sizes/font_size = 45
+text = "New Game"
+
+[node name="Load Game Button" type="Button" parent="Content/VBoxContainer/HBoxContainer/Button Menu" unique_id=2120323260]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("3_wctsj")
+theme_override_font_sizes/font_size = 45
+text = "Load Game"
+
+[node name="Credits" type="Button" parent="Content/VBoxContainer/HBoxContainer/Button Menu" unique_id=644834886]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("3_wctsj")
+theme_override_font_sizes/font_size = 45
+text = "Credits"
+
+[node name="Version" type="Label" parent="." unique_id=977130045]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -15.0
+offset_right = 610.0
+grow_vertical = 0
+text = "Version: "
+label_settings = SubResource("LabelSettings_82207")
+vertical_alignment = 1
+script = ExtResource("4_yjsyi")
