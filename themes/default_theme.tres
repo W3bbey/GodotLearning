@@ -25,6 +25,7 @@ axis_stretch_vertical = 1
 region_rect = Rect2(0, 0, 45, 45)
 
 [resource]
+default_font = ExtResource("1_het5a")
 Button/fonts/font = ExtResource("1_het5a")
 Button/styles/hover = SubResource("StyleBoxTexture_fx2g0")
 Button/styles/normal = SubResource("StyleBoxTexture_fx2g0")

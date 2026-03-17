@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://tkky47l3ntjq"]
+
+[ext_resource type="Theme" uid="uid://da3i6nf2tt6sk" path="res://themes/default_theme.tres" id="1_35dpi"]
+[ext_resource type="Texture2D" uid="uid://6he5jegxnnj8" path="res://gfx/ui/loading_frame.png" id="2_2t34d"]
+[ext_resource type="Texture2D" uid="uid://tysw4gcel7bx" path="res://gfx/ui/loading_bar.png" id="3_85qbq"]
+
+[node name="Control" type="Control" unique_id=925414148]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=592707299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=874580652]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1242724634]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1686318475]
+layout_mode = 2
+theme = ExtResource("1_35dpi")
+theme_override_font_sizes/font_size = 35
+text = "Loading..."
+horizontal_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CenterContainer/VBoxContainer" unique_id=44664153]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_top = 1
+stretch_margin_right = 1
+stretch_margin_bottom = 1
+texture_over = ExtResource("2_2t34d")
+texture_progress = ExtResource("3_85qbq")
