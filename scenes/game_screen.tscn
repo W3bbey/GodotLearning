@@ -1,25 +1,9 @@
 [gd_scene format=3 uid="uid://4ah724y5qocn"]
 
-[node name="Game" type="Node2D" unique_id=226791511]
+[ext_resource type="Script" uid="uid://cg2ckrfa5fuf4" path="res://scripts/Game/game_screen.gd" id="1_8mhku"]
 
-[node name="Control" type="Control" parent="." unique_id=2089435680]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 640.0
-offset_bottom = 360.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Game" type="Node" unique_id=955234468 node_paths=PackedStringArray("map")]
+script = ExtResource("1_8mhku")
+map = NodePath("Map")
 
-[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=383929335]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Control/CenterContainer" unique_id=975431998]
-layout_mode = 2
-text = "Game"
+[node name="Map" type="Node" parent="." unique_id=572031870]
