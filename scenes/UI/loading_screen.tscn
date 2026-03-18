@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://tkky47l3ntjq"]
 
 [ext_resource type="Theme" uid="uid://da3i6nf2tt6sk" path="res://themes/default_theme.tres" id="1_35dpi"]
+[ext_resource type="Script" uid="uid://c51tpsmqx3es2" path="res://scripts/loading_screen.gd" id="1_85qbq"]
 [ext_resource type="Texture2D" uid="uid://6he5jegxnnj8" path="res://gfx/ui/loading_frame.png" id="2_2t34d"]
 [ext_resource type="Texture2D" uid="uid://tysw4gcel7bx" path="res://gfx/ui/loading_bar.png" id="3_85qbq"]
 
-[node name="Control" type="Control" unique_id=925414148]
+[node name="LoadingScreen" type="Control" unique_id=925414148 node_paths=PackedStringArray("loading_bar")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_85qbq")
+loading_bar = NodePath("CenterContainer/VBoxContainer/TextureProgressBar")
 
 [node name="Background" type="ColorRect" parent="." unique_id=592707299]
 layout_mode = 1

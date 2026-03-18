@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="Legacy of the Ancient Questor"
-config/version="Prototype 1"
+config/version="Prototype 2"
 run/main_scene="uid://7ur6w4325y0a"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Loader="*uid://ce717f0b56beq"
 
 [display]
 
