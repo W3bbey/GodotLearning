@@ -1,6 +1,6 @@
 extends Node
 
-var default_map_path:String
+var default_map_path:String = "res://scenes/game/maps/world_map.tscn"
 
 var current_map_path
 

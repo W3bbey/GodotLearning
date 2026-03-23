@@ -110,3 +110,5 @@ text = "Version: "
 label_settings = SubResource("LabelSettings_82207")
 vertical_alignment = 1
 script = ExtResource("4_yjsyi")
+
+[connection signal="pressed" from="Content/VBoxContainer/HBoxContainer/Button Menu/New Game Button" to="." method="_on_new_game_button_pressed"]

@@ -6,4 +6,4 @@ class_name GameScreen
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	map.add_child(load(GameManager.currentMap).instantiate())
+	map.add_child(load(GameManager.current_map_path).instantiate())
