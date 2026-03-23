@@ -24,7 +24,7 @@ GameManager="*uid://3yxb4mm51v06"
 [display]
 
 window/size/viewport_width=640
-window/size/viewport_height=340
+window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
