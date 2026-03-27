@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://7ur6w4325y0a"]
 
-[ext_resource type="Script" uid="uid://chfvsfabc1y25" path="res://scripts/title_screen.gd" id="1_82207"]
+[ext_resource type="Script" uid="uid://chfvsfabc1y25" path="res://scripts/title/title_screen.gd" id="1_82207"]
 [ext_resource type="Texture2D" uid="uid://by0tw6sfd45fu" path="res://gfx/title/tree-3094982_1280.jpg" id="1_en7bx"]
 [ext_resource type="FontFile" uid="uid://c7f4bop4ocbt3" path="res://fonts/alagard_by_pix3m-d6awiwp.ttf" id="2_u5veq"]
 [ext_resource type="Theme" uid="uid://da3i6nf2tt6sk" path="res://themes/default_theme.tres" id="3_wctsj"]
-[ext_resource type="Script" uid="uid://bx7iap0n15ww2" path="res://scripts/version.gd" id="4_yjsyi"]
+[ext_resource type="Script" uid="uid://bx7iap0n15ww2" path="res://scripts/UI/version.gd" id="4_yjsyi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wctsj"]
 font = ExtResource("2_u5veq")

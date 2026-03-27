@@ -1,9 +1,43 @@
 [gd_scene format=3 uid="uid://4ah724y5qocn"]
 
 [ext_resource type="Script" uid="uid://cg2ckrfa5fuf4" path="res://scripts/Game/game_screen.gd" id="1_8mhku"]
+[ext_resource type="Texture2D" uid="uid://cic2efmjqik12" path="res://gfx/ui/main_frame.png" id="2_3uriw"]
+[ext_resource type="FontFile" uid="uid://c7f4bop4ocbt3" path="res://fonts/alagard_by_pix3m-d6awiwp.ttf" id="3_dv2sx"]
 
 [node name="Game" type="Node" unique_id=955234468 node_paths=PackedStringArray("map")]
 script = ExtResource("1_8mhku")
 map = NodePath("Map")
 
 [node name="Map" type="Node" parent="." unique_id=572031870]
+
+[node name="UI" type="Control" parent="." unique_id=1481949117]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=600900040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3uriw")
+
+[node name="LeftPanel" type="VBoxContainer" parent="UI/TextureRect" unique_id=1645313630]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 166.0
+offset_bottom = 216.0
+
+[node name="CommandMenu" type="VBoxContainer" parent="UI/TextureRect/LeftPanel" unique_id=1586212408]
+layout_mode = 2
+
+[node name="PassButton" type="Button" parent="UI/TextureRect/LeftPanel/CommandMenu" unique_id=1187067592]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dv2sx")
+text = "Pass"
