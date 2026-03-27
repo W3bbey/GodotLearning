@@ -1,7 +1,7 @@
 # Removing the extend and adding class makes this script its own class
 class_name Command
 
-signal COMMAND_PROCESSED(lable)
+signal COMMAND_PROCESSED(label)
 
 var command_label
 
