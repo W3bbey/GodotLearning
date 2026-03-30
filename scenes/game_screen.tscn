@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cg2ckrfa5fuf4" path="res://scripts/Game/game_screen.gd" id="1_8mhku"]
 [ext_resource type="Texture2D" uid="uid://cic2efmjqik12" path="res://gfx/ui/main_frame.png" id="2_3uriw"]
+[ext_resource type="Script" uid="uid://v2bq5e6sgn6h" path="res://scripts/Game/command_processor.gd" id="2_dv2sx"]
 [ext_resource type="FontFile" uid="uid://c7f4bop4ocbt3" path="res://fonts/alagard_by_pix3m-d6awiwp.ttf" id="3_dv2sx"]
 
 [node name="Game" type="Node" unique_id=955234468 node_paths=PackedStringArray("map")]
 script = ExtResource("1_8mhku")
 map = NodePath("Map")
+
+[node name="CommandProcessor" type="Timer" parent="." unique_id=861796086]
+script = ExtResource("2_dv2sx")
 
 [node name="Map" type="Node" parent="." unique_id=572031870]
 
