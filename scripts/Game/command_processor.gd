@@ -12,11 +12,23 @@ func _ready():
 	CommandDispatcher.WAIT_FOR_COMMAND.connect(wait_for_command)
 	CommandDispatcher.PAUSE_PROCESSING.connect(pause_processing)
 	
-func process_command():
-	pass
+func process_command(command:Command):
+	if (is_stopped()):
+		return
+	
+	stop()
+	
+	command.COMMAND_PROCESSED.connect(on_command_processed)
+	BROADCAST_COMMAND.emit(command.get_command_text())
+	command.execute()
 	
 func wait_for_command():
-	pass
+	resume_waiting = true
+	start()
 	
 func pause_processing():
+	resume_waiting = false
+	stop()
+
+func on_command_processed(result):
 	pass

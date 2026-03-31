@@ -10,6 +10,7 @@ script = ExtResource("1_8mhku")
 map = NodePath("Map")
 
 [node name="CommandProcessor" type="Timer" parent="." unique_id=861796086]
+wait_time = 3.0
 script = ExtResource("2_dv2sx")
 
 [node name="Map" type="Node" parent="." unique_id=572031870]

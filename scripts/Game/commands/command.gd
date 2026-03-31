@@ -8,3 +8,6 @@ var command_label
 
 func execute():
 	COMMAND_PROCESSED.emit(command_label)
+
+func get_command_text():
+	return command_label
